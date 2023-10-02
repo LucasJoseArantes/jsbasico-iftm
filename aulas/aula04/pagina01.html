@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 - 11/09/2023</title>
+    <script src="script01.js"></script>
+    <style>
+        *{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form> 
+        <label for="">Mensagem</label>
+        <input 
+        type="button"
+        value="Exibir"
+        onclick="exibirMsg('Clicou em mim')"
+        onmouseover="exibirMsg('Passou o Mouse')"
+        onmouseout="exibirMsg('Retirou o Mouse')">
+    </form>
+
+    <form>
+        <label for="">Nome:</label>
+        <input type="text" id="txtName">
+
+        <input type="button" value="Exibir Texto" onclick="pegarTexto()">
+
+        <input type="button" value="Inserir Texto"
+        onclick="inserirText()">
+    </form>
+</body>
+</html>
