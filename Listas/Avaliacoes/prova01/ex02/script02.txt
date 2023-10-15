@@ -1,0 +1,45 @@
+valor1 = document.getElementById("txtValor1");
+valor2 = document.getElementById("txtValor2");
+resultado = document.getElementById("txtResultado");
+equacao = document.getElementById("txtEquacao");
+btnSoma = document.getElementById("btnSoma");
+btnSubtracao = document.getElementById("btnSubtracao");
+btnMultiplicacao = document.getElementById("btnMultiplicacao");
+btnDivisao = document.getElementById("btnDivisao");
+
+btnSoma.addEventListener("click", function (event) { exibirEquacao('+', event) });
+btnSubtracao.addEventListener("click", function (event) { exibirEquacao('-', event) });
+btnMultiplicacao.addEventListener("click", function (event) { exibirEquacao('*', event) });
+btnDivisao.addEventListener("click", function (event) { exibirEquacao('/', event) });
+
+
+function exibirEquacao(operador, event) {
+    event.preventDefault();
+    equacao.value = valor1.value + operador + valor2.value
+    btnResultado.addEventListener("click", function (event) { exibirResultado(operador, event) });
+}
+
+function exibirResultado(operador, event) {
+    event.preventDefault();
+    switch (operador) {
+        case '+':
+            resultado.value = parseInt(valor1.value) + parseInt(valor2.value);
+            break;
+
+        case '-':
+            resultado.value = parseInt(valor1.value) - parseInt(valor2.value);
+            break;
+
+        case '*':
+            resultado.value = parseInt(valor1.value) * parseInt(valor2.value);
+            break;
+
+        case '/':
+            resultado.value = parseInt(valor1.value) / parseInt(valor2.value);
+            break;
+
+        default:
+            alert("Opção não reconhecida");
+            break;
+    }
+}

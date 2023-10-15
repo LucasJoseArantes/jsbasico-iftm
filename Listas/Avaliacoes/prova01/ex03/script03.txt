@@ -1,0 +1,20 @@
+var texto = prompt("Digite um texto");
+var palavra = prompt("Digite uma palavra");
+var palavra = palavra.toLowerCase();
+var contador = 0;
+var palavrasTxt = texto.split(" ");
+var palavrasLocalizadas = [];
+
+for (var i = 0; i < palavrasTxt.length; i++) {
+  var palavraTxt = palavrasTxt[i].toLowerCase();
+
+  if (palavraTxt.includes(palavra)) {
+    contador++;
+    palavrasLocalizadas.push(palavrasTxt[i]);
+  }
+}
+
+document.write("<h1>Texto:</h1>" + texto);
+document.write("<h1>Palavra procurada:</h1>" + palavra);
+document.write("<h1>Palavras encontradas:</h1>" + palavrasLocalizadas.join(", "));
+document.write("<h1>Número de ocorrências:</h1>" + contador);

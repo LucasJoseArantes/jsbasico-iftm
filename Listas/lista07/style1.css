@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(19, 156, 19);
+    padding: 15px ;
+}
+
+.container fieldset{
+    display: flex;
+    border: 3px solid green;
+    max-width: 500px;   
+    padding: 10px 20px 30px 20px ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container legend{
+    text-align: center;
+    font-size: 1.5em; 
+    padding: 5px;
+}
+
+.container-form{
+  
+    margin: 10px;
+   
+}
+
+.container-form input{
+    border: none;
+    color: green;
+    border-bottom: 3px solid green;
+    width: 300px;
+    outline: none;
+}
+
+.btn-entrar{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin: auto;
+    width: 250px;
+}
+
