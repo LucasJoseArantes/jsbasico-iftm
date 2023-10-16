@@ -1,5 +1,7 @@
+var primeiroNome = localStorage.getItem("primeiroNome");
+
 document.getElementById("gato01").addEventListener("click", function () {
-    alert('Oi <USUÁRIO>, tudo bem com você?');
+    alert('Oi ' + primeiroNome + ' tudo bem com você?');
 })
 
 var contador = 0;
