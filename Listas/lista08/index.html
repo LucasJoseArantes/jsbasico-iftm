@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>É PAR - Lista08 | JavaScript Básico IFTM</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div>
+                <h2>Nível:</h2>
+                <select name="nivel" id="nivel"> 
+                    <option value="1">Fácil</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Difícil</option>
+                    <!-- USA O VALUE COMO Nº PARA MUDAR A DIFICULDADE NO SCRIPT -->
+                </select>
+            </div>
+
+            <div>
+                <h2>Tempo: <span id="tempo">00:00</span></h2>
+                
+            </div>
+
+            <div>
+                <button id="btnInicio"> INICAR </button>
+                <button id="btnPausa"> PAUSAR </button>
+                <button id="btnParar"> PARAR </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div id="mensagem">Clique em Iniciar para começar.</div>
+        <div id="ramNum"></div>
+
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div>
+                <h2>ACERTOS: <span id="correct-count">0 </span> (<span id="porcentagem">0%</span>) </h2>
+            </div>
+
+            <div>
+                <h2>ERROS:<span id="wrong-count">0</span></h2>
+            </div>
+
+            <div>
+                <h2> Números pares sorteado: <span id="even-count">0 </span> </h2>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="script01.js"></script>
+</html>

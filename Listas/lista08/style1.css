@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+.container-header, .container-footer{
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; 
+    border: 2px solid yellow;
+    margin: auto;
+    padding: 0px 100px;
+}
+
+.container-header span, .container-footer span{
+    color: white;
+}
+
+.container-header div{
+    border: 1px solid red;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+header{
+    top: 0;
+}
+
+footer{
+    bottom: 0;
+}
+
+header, footer{
+    background-color: black;
+    display: flex;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+header h2, footer h2{
+    color: yellow;
+}
+
+header , footer , button{
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btnInicio, #btnPausa, #btnParar {
+    background-color: #6200ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#inicio:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#start:disabled, #pausa:disabled, #stop:disabled {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+#ramNum {
+    font-size: 256px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mensagem {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#nivel , #tempo {
+    font-size: 16px;
+}
