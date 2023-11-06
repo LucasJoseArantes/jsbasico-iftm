@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const displayPercentage = document.getElementById("porcentagem")
 
     let timer;
-    let isGameRunning = false;
-    let nivel = "easy";
+    let statusJogo = false; 
+    let nivel = "facil";
     let timeToChangeNumber = 1000;
 
     const nivelTimes = {
-        easy: 105,
-        medium: 75,
-        hard: 30,
+        facil: 105,
+        medio: 75,
+        dificil: 30,
     };
 
     const nivelTimeToChangeNumber = {
-        easy: 1000,
-        medium: 750,
+        facil: 1000,
+        medio: 750,
         hard: 500,
     };
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let evenCount = 0;
 
     nivelSelect.addEventListener("change", function() {
-        if (!isGameRunning) {
+        if (!statusJogo) {
             nivel = nivelSelect.value;
             setTimerDuration();
             setTimeToChangeNumber();
@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (nivelSelect.value === "") {
             messageDisplay.textContent = "Por favor, selecione um nível.";
         } else {
-            if (!isGameRunning) {
-                isGameRunning = true;
+            if (!statusJogo) {
+                statusJogo = true;
                 setTimerDuration();
                 setTimeToChangeNumber();
                 startTimer();
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     stopButton.addEventListener("click", function() {
         clearInterval(timer);
-        isGameRunning = false;
+        statusJogo = false;
         startButton.disabled = false;
         pauseButton.disabled = true;
         stopButton.disabled = true;
@@ -103,14 +103,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function pauseTimer() {
         clearInterval(timer);
-        isGameRunning = false;
+        statusJogo = false;
         startButton.disabled = false;
         pauseButton.disabled = true;
         messageDisplay.textContent = "Jogo pausado";
     }
 
     randomNumberDisplay.addEventListener("click", function() {
-        if (isGameRunning) {
+        if (statusJogo) {
             const randomNumber = parseInt(randomNumberDisplay.textContent);
 
             if (randomNumber % 2 === 0) {
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function generateRandomNumber() {
-        if (isGameRunning) {
+        if (statusJogo) {
             const randomNumber = Math.floor(Math.random() * 100);
             randomNumberDisplay.textContent = randomNumber;
             randomNumberDisplay.style.color = 'black';
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function stopGame() {
         clearInterval(timer);
-        isGameRunning = false;
+        statusJogo = false;
         startButton.disabled = false;
         pauseButton.disabled = true;
         stopButton.disabled = true;
