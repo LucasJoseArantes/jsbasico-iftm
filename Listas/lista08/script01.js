@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const nivelTimeToChangeNumber = {
         facil: 1000,
         medio: 750,
-        hard: 500,
+        dificil: 500,
     };
 
     let remainingTime = 0;

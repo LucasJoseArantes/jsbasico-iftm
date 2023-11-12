@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 
+@media (max-width: 768px) {
+    .container-header, .container-footer div{
+        padding: 10px;
+        margin: auto;
+    }
+    .container-header, .container-footer{
+        font-size: 10px;
+    }
+
+    #btnInicio, #btnPausa, #btnParar {
+        font-size: 10px;
+        width: 25%;
+    }
+
+}
+
 *{
     box-sizing: border-box;
     padding: 0px;
@@ -11,12 +27,10 @@
 
 .container-header, .container-footer{
     display: flex;
-    max-width: 1200px;
     justify-content: space-between;
     align-items: center;
     height: 100px; 
-    margin: auto;
-    padding: 10px 100px;
+    border: 2px solid red;
 }
 
 .container-header span, .container-footer span{
@@ -27,8 +41,8 @@
     text-align: center;
     display: flex;
     flex-direction: row;
-
 }
+
 
 header{
     top: 0;
