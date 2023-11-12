@@ -30,7 +30,8 @@
     justify-content: space-between;
     align-items: center;
     height: 100px; 
-    border: 2px solid red;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .container-header span, .container-footer span{
