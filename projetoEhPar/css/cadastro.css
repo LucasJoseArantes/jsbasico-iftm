@@ -7,10 +7,11 @@
 }
 
 body{
-    background-image: url(/img/bdgCover.png);
-    background-repeat: no-repeat;
+    background-image: url(https://github.com/LucasJoseArantes/jsbasico-iftm/blob/0c730b2ab508ec8fd8383753ce74e495ec0e7dcc/projetoEhPar/img/bdgCover.png?raw=true);
+    background-repeat: repeat-y;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 header, footer{
