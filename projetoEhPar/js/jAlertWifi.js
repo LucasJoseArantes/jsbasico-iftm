@@ -52,7 +52,6 @@ function alertWifi($txt, $hasTimer, $countTimer, $srcImg, $fontSize, $paginaAbri
         var btn = document.createElement("button");
         btn.innerHTML = "Fechar";
         btn.setAttribute("class","button");
-    
         if ($paginaAbrir != "") btn.addEventListener("click",() => window.open($paginaAbrir,"_self"));
         else btn.addEventListener("click",() => closeAlertWifi($panelInfo));
         $($contentPanel).append(btn);

@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="img/iconEven.ico" type="image/x-icon">
 </head>
 <body>
     
-    <form action="">
+    <header>
+        <div class="container-header">
+                <!-- <img src="img/iconEven150px.png"> -->
+        </div>
+    </header>
 
-        <input type="text" name="txtUser" placeholder="Usuário">
-    </form>
+    <main>
+        <div class="container-cadastro">
+            <img src="img/iconEven150px.png">
+            <p>Faça seu Login</p>
+            <div class="container-userImg"> </div>
+            <form action="" class="loginForm">
+                <input type="text" id="txtUser" placeholder="Usuário">
+                <input type="password" id="txtPwd" placeholder="Senha">
+                <input type="button" id="btnLogin" value="Login">
+                <div class="remeberMe">
+                    <input type="checkbox" name="remeberMe" id="remeberMe"> <label for="remeberMe">Lembre-se de mim</label>
+                </div>
+            </form>
+            <p>Ainda não possui Cadastro? Clique aqui para <a href="cadastrar.html"> Cadastrar</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div>
+                <img src="img/tituloRemove.png" width="60px">
+            </div>
+            <div>
+                <a href=""> Arquivos |</a>
+                <a href=""> Termos de Serviço |</a>
+                <a href=""> Agradecimento |</a>
+                <a href=""> Contato</a>
+            </div>
+            <div class="socialMedia"> 
+                <img src="img/facebook-icon-white-png.png" alt="Facebook" width="25px">
+                <img src="img/instaWhite.png" alt="Youtube" width="25px">
+                <img src="img/twiiter.png" alt="Twitter" width="25px">
+            </div>
+        </div>
+    </footer>
 </body>
-<script src="index.js"></script>
+<script src="js/index.js"></script>
+<script src="js/jAlertWifi.js"></script>
+
 </html>

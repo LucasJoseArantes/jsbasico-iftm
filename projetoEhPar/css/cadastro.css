@@ -41,24 +41,15 @@ header{
     justify-content: space-around;
 }
 
-.container-userImg{
-    border-radius: 50%;
-    border: 4px solid blue;
-    padding: 45px;
-    background-image: url(/img/userImg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 20px;
-    flex-grow: 1;
-    
-}
-
-
 main div{
     display: flex;
     justify-items: center;
     align-items: center;
     margin: auto;
+}
+
+.container-cadastro img{
+    margin-bottom: 10px;
 }
 
 .container-cadastro{
@@ -74,6 +65,7 @@ main div{
 
 .user-form{
     display: flex;
+    margin: 15px;
     flex-direction: column;
     width: 100%; 
     max-width: 400px; 
@@ -101,7 +93,7 @@ footer a{
     padding: 15px;
 }
 
-#btnCadastrar{
+#btnCadastrar, #btnLogin{
     background-color: rgb(19, 0, 128);
     color: white;
     font-weight: bold;
