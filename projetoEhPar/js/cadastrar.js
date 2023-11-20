@@ -33,7 +33,8 @@ window.addEventListener("load", function (){
                     localStorage.setItem("vetUsers", JSON.stringify(vet));
                 }
                 
-                alertWifi("Usuário cadastrado com sucesso", false, 0, "", 30, "");                
+                alertWifi("Usuário cadastrado com sucesso", false, 0, "", 30, "");       
+                window.location.href = "";         
           
              }
              
