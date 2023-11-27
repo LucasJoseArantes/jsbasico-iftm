@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+
+
+
 *{
     box-sizing: border-box;
     padding: 0px;
@@ -8,9 +12,12 @@
 
 body{
     background-image: url(https://github.com/LucasJoseArantes/jsbasico-iftm/blob/0c730b2ab508ec8fd8383753ce74e495ec0e7dcc/projetoEhPar/img/bdgCover.png?raw=true);
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh; 
     
 }
 
@@ -33,11 +40,19 @@ header{
     margin-bottom: 10px;
 }
 
+main{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    
+}
 
 .container-header{
     display: flex;
     align-items: flex-end;
-    width: 500px; 
+    max-width: 500px; 
     justify-content: space-around;
 }
 
@@ -56,7 +71,7 @@ main div{
     background-color: white;
     border-radius: 20px;
     max-width: 500px;
-    padding: 20px;
+    padding: 30px;
     flex-direction: column;
     box-shadow: 0px 7px 91px 8px rgba(0,0,0,0.56);
     -webkit-box-shadow: 0px 7px 91px 8px rgba(0,0,0,0.56);
@@ -67,7 +82,6 @@ main div{
     display: flex;
     margin: 15px;
     flex-direction: column;
-    width: 100%; 
     max-width: 400px; 
     flex-grow: 1;
 }
@@ -78,7 +92,7 @@ main div{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 800px;
+    max-width: 800px;
 }
 
 footer a{
@@ -105,3 +119,16 @@ input:hover{
 }
 
 
+@media only screen and (max-width: 600px) {
+    .container-cadastro {
+      padding: 30px;
+    }
+
+    .user-form input{
+        max-width: 300px;
+    }
+
+    .user-form{
+        margin: 0;
+    }
+}

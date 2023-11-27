@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo</title>
+    <link rel="stylesheet" href="css/jogo.css">
+    <link rel="shortcut icon" href="img/iconEven.ico" type="image/x-icon">
+    <title>Even? - Game</title>
 </head>
 <body>
-    <h1>JOGO</h1>
+    <header >
+            <div class="container-header">
+                <div>
+                    <h2>Nível:</h2>
+                    <select name="nivel" id="nivel">
+                        <option value="facil">Fácil</option>
+                        <option value="medio">Médio</option>
+                        <option value="dificil">Difícil</option>
+                        <!-- USA O VALUE COMO Nº PARA MUDAR A DIFICULDADE NO SCRIPT -->
+                    </select>
+                </div>
+                <div>
+                    <h2>Tempo: <span id="tempo">00:00</span></h2>
+                
+                </div>
+                
+                <div class="btn-container">
+                    <button id="btnInicio"> INICAR </button>
+                    <button id="btnPausa"> PAUSAR </button>
+                    <button id="btnParar"> PARAR </button>
+                </div>
+            </div>
+    </header>
+
+    <main>
+        <div id="mensagem">Clique em Iniciar para começar.</div>
+        <div id="ramNum"></div>
+
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div>
+                <h2>ACERTOS: <span id="correct-count">0 </span> (<span id="porcentagem">0%</span>) </h2>
+            </div>
+
+            <div>
+                <h2>ERROS:<span id="wrong-count">0</span></h2>
+            </div>
+
+            <div>
+                <h2> Números pares sorteado: <span id="even-count">0 </span> </h2>
+            </div>
+        </div>
+    </footer>
 </body>
+
+<script src="js/jogo.js"></script>
 </html>
