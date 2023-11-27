@@ -1,4 +1,198 @@
-document.addEventListener("DOMContentLoaded", function() {
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="jogo.css"> -->
+    <link rel="shortcut icon" href="img/iconEven.ico" type="image/x-icon">
+    <title>Even? - Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
+@media (max-width: 768px) {
+    .container-header, .container-footer div{
+        padding: 10px;
+        margin: auto;
+    }
+    .container-header, .container-footer{
+        font-size: 10px;
+    }
+
+    #btnInicio, #btnPausa, #btnParar {
+        font-size: 10px;
+        width: 25%;
+    }
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh;
+    margin: 0;
+  }
+
+.container-header, .container-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; 
+    margin: auto;
+    max-width: 1200px;
+}
+
+.container-header span, .container-footer span{
+    color: white;
+}
+
+.container-header div{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+header{
+    top: 0;
+}
+
+footer{
+    bottom: 0;
+}
+
+header, footer{
+    background-color: black;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+header h2, footer h2{
+    color: yellow;
+}
+
+header , footer , button{
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+#btnInicio, #btnPausa, #btnParar {
+    background-color: #6200ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#inicio:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#start:disabled, #pausa:disabled, #stop:disabled {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+#ramNum {
+    font-size: 256px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mensagem {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+select {
+    border: none;
+    margin-left: 10px;
+    padding: 2px;
+    background-color: black;
+    color: white;
+    outline: none;
+  }
+
+  
+    </style>
+</head>
+<body>
+    <header >
+            <div class="container-header">
+                <div>
+                    <h2>Nível:</h2>
+                    <select name="nivel" id="nivel">
+                        <option value="facil">Fácil</option>
+                        <option value="medio">Médio</option>
+                        <option value="dificil">Difícil</option>
+                        <!-- USA O VALUE COMO Nº PARA MUDAR A DIFICULDADE NO SCRIPT -->
+                    </select>
+                </div>
+                <div>
+                    <h2>Tempo: <span id="tempo">00:00</span></h2>
+                
+                </div>
+                
+                <div class="btn-container">
+                    <button id="btnInicio"> INICAR </button>
+                    <button id="btnPausa"> PAUSAR </button>
+                    <button id="btnParar"> PARAR </button>
+                </div>
+            </div>
+    </header>
+
+    <main>
+        <div id="mensagem">Clique em Iniciar para começar.</div>
+        <div id="ramNum"></div>
+
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div>
+                <h2>ACERTOS: <span id="correct-count">0 </span> (<span id="porcentagem">0%</span>) </h2>
+            </div>
+
+            <div>
+                <h2>ERROS:<span id="wrong-count">0</span></h2>
+            </div>
+
+            <div>
+                <h2> Números pares sorteado: <span id="even-count">0 </span> </h2>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script >
+    document.addEventListener("DOMContentLoaded", function() {
     const nivelSelect = document.getElementById("nivel");
     const timerDisplay = document.getElementById("tempo");
     const startButton = document.getElementById("btnInicio");
@@ -112,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function() {
     randomNumberDisplay.addEventListener("click", function() {
         if (statusJogo) {
             const randomNumber = parseInt(randomNumberDisplay.textContent);
-    
+
             if (randomNumber % 2 === 0) {
                 randomNumberDisplay.style.color = 'green';
                 correctCount++;
@@ -120,13 +314,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 randomNumberDisplay.style.color = 'red';
                 wrongCount++;
             }
-    
-            evenCount++; // Incrementa o contador de números pares
-    
-            // Calcula a porcentagem corretamente
-            const totalAttempts = correctCount + wrongCount;
-            const percentage = totalAttempts === 0 ? 0 : ((correctCount / totalAttempts) * 100).toFixed(0);
-            correctCountDisplay.textContent = `${correctCount} (${percentage}%)`;
+
+            const percentage = evenCount === 0 ? 0 : ((correctCount / evenCount) * 100).toFixed(0);
+            correctCountDisplay.textContent = `${correctCount}`;
+            displayPercentage.textContent = `${percentage}%`;
             wrongCountDisplay.textContent = wrongCount;
         }
     });
@@ -161,3 +352,5 @@ document.addEventListener("DOMContentLoaded", function() {
         remainingTime = 0;
     }
 });
+</script>
+</html>
