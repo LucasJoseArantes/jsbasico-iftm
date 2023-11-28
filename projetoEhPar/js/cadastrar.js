@@ -28,13 +28,19 @@ window.addEventListener("load", function (){
                 else{
                     // O VETOR vet VEM COMO UM JSON DO LOCALSTORAGE, ENTÃO PRECISAMOS CONVERTER PARA ADICIONAR OS NOVOS USUÁRIOS
                     vet = JSON.parse(vetUsers);
-                    vet.push(newUser);
-
-                    localStorage.setItem("vetUsers", JSON.stringify(vet));
+                    var usuarioExistente = vet.find(function (usuario) {
+                        return usuario.nome === newUser.nome && usuario.senha === newUser.senha;
+                    });
+                
+                    if (usuarioExistente) {
+                        alertWifi("Usuário já cadastrado", false, 0, "", 30, "cadastrar.html");
+                    } else {
+                        vet.push(newUser);
+                        localStorage.setItem("vetUsers", JSON.stringify(vet));
+                        alertWifi("Usuário cadastrado com sucesso", false, 0, "", 30, "index.html");
+                    }
                 }
                 
-                alertWifi("Usuário cadastrado com sucesso", false, 0, "", 30, "index.html"); 
-          
              }
              
         }
