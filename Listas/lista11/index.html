@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 11 - JS Básico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>    </header>
+
+    <main>
+        <form action="">
+
+            <div>   
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="text" name="dataNascimento" id="dataNascimento" placeholder="dd/mm/aaaa ou dd/mm/aa.">
+                <input type="button" value="Validar" id="validarDataNascimento">
+            </div>
+        
+            <div>   
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx.">
+                <input type="button" value="Validar" id="validarCPF">
+            </div>
+        
+            <div>   
+                <label for="matricula">Número de matrícula de um aluno:</label>
+                <input type="text" name="matricula" id="matricula" placeholder="IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy">
+                <input type="button" value="Validar" id="validarMatricula">
+            </div>
+        
+            <div>   
+                <label for="codigoDisciplina">Código de uma disciplina do IFTM</label>
+                <input type="text" name="codigoDisciplina" id="codigoDisciplina" placeholder="MT-xx.xxx-IFTM.">
+                <input type="button" value="Validar" id="validarCodigoDisciplina">
+                <p>Onde x é um dígito e as letras do
+                    padrão poderão ser tanto maiúsculas quanto minúsculas.</p>
+            </div>
+        
+            <div>   
+                <label for="codigoDisciplinaV1">Código de uma disciplina do IFTM (versão1)</label>
+                <input type="text" name="codigoDisciplinaV1" id="codigoDisciplinaV1" placeholder="MT-xx.xxx-IFTM.">
+                <input type="button" value="Validar" id="validarCodigoDisciplinaV1">
+                <p>Onde x deverá ser um dígito, as letras
+                    MT deverão ser maiúsculas e as letras IFTM poderão ser tanto maiúsculas quanto
+                    minúsculas.</p>
+            </div>
+        
+            <div>   
+                <label for="codigoDisciplinaV2">Código de uma disciplina do IFTM (versão2)</label>
+                <input type="text" name="codigoDisciplinaV2" id="codigoDisciplinaV2" placeholder="MT-xx.xxx-IFTM.">
+                <input type="button" value="Validar" id="validarCodigoDisciplinaV2">
+                <p>Onde x deverá ser um dígito, as letras
+                    MT deverão ser maiúsculas e as letras IFTM poderão ser tanto maiúsculas quanto
+                    minúsculas.</p>
+            </div>
+        
+            <div>   
+                <label for="codigoDisciplinaV3">Código de uma disciplina do IFTM (versão3)</label>
+                <input type="text" name="codigoDisciplinaV3" id="codigoDisciplinaV3" placeholder="MT-xx.xxx-IFTM.">
+                <input type="button" value="Validar" id="validarCodigoDisciplinaV3">
+                <p>Onde x é um dígito e as letras do
+                    padrão poderão ser tanto maiúsculas quanto minúsculas e entre as letras poderá haver no
+                    máximo um espaço em branco.</p>
+            </div>
+        
+            <div>   
+                <label for="nomeCampus">Nome de campus do IFTM</label>
+                <input type="text" name="nomeCampus" id="nomeCampus" placeholder="IFTM campus Uberlândia ou IFTM campus Uberlândia Centro.">
+                <input type="button" value="Validar" id="validarNomeCampus">
+                <p></p>
+            </div>
+        
+            <div>
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone" placeholder="+yy(xx)xxxxx-xxxx">
+                <input type="button" value="Validar" id="validarTelefone">
+            </div>
+            
+            <div>
+                <label for="telefoneV2">Telefone (versão 2)</label>
+                <input type="text" name="telefoneV2" id="telefoneV2" placeholder="(xx)zyyyyy-wwww">
+                <input type="button" value="Validar" id="validarTelefoneV2">
+            </div>
+            
+            <div>
+                <label for="altura">Altura de uma pessoa</label>
+                <input type="text" name="altura" id="altura" placeholder="x,xz ou x.xz" >
+                <input type="button" value="Validar" id="validarAltura">
+            </div>
+            
+            <div>
+                <label for="faturamento">Faturamento anual de uma empresa</label>
+                <input type="text" name="faturamento" id="faturamento" placeholder="R$0,00 até R$999.999.999.999,99">
+                <input type="button" value="Validar" id="validarFaturamento">
+            </div>
+
+            
+            
+            <div>
+                <label for="cronometro">Cronômetro</label>
+                <input type="text" name="cronometro" id="cronometro" placeholder="HH:MM:SS:CC">
+                <input type="button" value="Validar" id="validarCronometro">
+            </div>
+        
+        </form>
+    </main>
+
+
+    <footer></footer>
+</body>
+<script src="script.js"></script>
+<script src="jMaskWiFi/jMaskWiFi/js/jMaskWiFi.js"></script>
+</html>

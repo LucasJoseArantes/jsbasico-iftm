@@ -1,0 +1,14 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+form div{
+    margin: 15px 0px;
+}
+
+div input:nth-child(2){
+    
+    width: 400px;
+}
